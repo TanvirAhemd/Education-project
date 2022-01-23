@@ -1,0 +1,111 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  06. newsletter CSS START
+/*----------------------------------------*/
+
+.category{
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 970px;
+        }   
+    } 
+    &__area{
+        padding: 100px 0 58px 0;
+    }
+
+    &__top-wrapper{
+        padding-bottom: 38px;
+        &-1{
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color12;
+        }
+        &-2{
+            font-family: $open;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 50px;
+            color: $title-color2;
+            @media #{$md}{
+                font-size: 32px;
+            }
+            @media #{$sm}{
+                font-size: 26px;
+            }
+            @media #{$xs}{
+                font-size: 24px;
+            }
+        }
+
+
+    }
+    &__wrapper{
+        max-width: 100%;
+        padding: 20px 0px 06px 22px;
+        border-radius: 6px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 30px 40px 0px rgba(0, 16, 35, 0.12);
+
+        img{
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+        h4{
+            display: inline-block;
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 50px;
+            color: $title-color2;
+            vertical-align: sub;
+        }
+    }
+    &__inner{
+        @include transition(.1s);
+        position: relative;
+        z-index: 1;
+        &::before{
+            position: absolute;
+            content: "";
+            left: 1px;
+            right: 0;
+            top: 0px;
+            border-radius: 6px;
+            background: $background-color-5;
+            height: 100%;
+            width: 90%;
+            z-index: -1;
+            @include transition(.3s);
+            @media #{$sm,$xs}{
+                top: 1px;
+                height: 97%;
+            }
+        }
+        &:hover,
+        &.active{
+            &::before{
+                left: -3px;
+                
+            }
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            z-index: -2;
+        }
+        .category-circle-1{
+            bottom: 5%;
+            left: 41%;
+            @media #{$md,$sm,$xs}{
+                display: none;
+            }
+        }
+    }
+}

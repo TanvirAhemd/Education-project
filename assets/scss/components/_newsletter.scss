@@ -1,0 +1,99 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  06. newsletter CSS START
+/*----------------------------------------*/
+.newsletter{
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__area{
+        height: 200px;
+    }
+    &__wrapper{
+        padding-top: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media #{$sm,$xs}{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__title{
+        font-family: $open;
+        font-size: 44px;
+        font-weight: 800;
+        letter-spacing: -10;
+        color: $background-color-4;
+        vertical-align: middle;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__form{
+        top: -12px;
+        margin-right: 132px;
+        position: relative;
+        @media #{$sm,$xs}{
+            top: 20px;
+           margin-right: 132px;
+        }
+        & input{
+            width: 340px;
+            height: 60px;
+            padding: 0 30px;
+            border: none;
+            outline: none;
+            background: $white;
+            border-radius: 6px 0 0 6px;
+            @media #{$sm,$xs}{
+                width: 270px;
+                height: 60px;
+            }
+            @media #{$xs}{
+                height: 60px;
+                width: 200px;
+             }
+            &::placeholder{
+                font-size: 16px;
+                font-weight: 400;
+                color: $color9;
+            }
+
+            &:focus{
+                @include box-shadow(0px 20px 30px 0px rgba(8, 0, 42, 0.14));
+            }
+        }
+
+        & button{
+            position: absolute;
+            width: 130px;
+            height: 60px;
+            line-height: 28px;
+            padding: 0 5px;
+            background: $color10;
+            color: $background-color-4;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 0 6px 6px 0;
+            @media #{$xs}{
+                width: 100px;
+                height: 60px;
+             }
+            &:hover{
+                background-color: $color4;
+                color: $background-color-4;
+                @include box-shadow(0px 20px 30px 0px rgba(8, 0, 42, 0.14));
+            } 
+        }
+    }
+}

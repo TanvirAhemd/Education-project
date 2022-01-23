@@ -1,0 +1,266 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  Step CSS START
+/*----------------------------------------*/
+
+.step{
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__title-content{
+        padding-bottom: 30px;
+    }
+    &__pre-title{
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 600;
+        color: $background-color-5;
+    }
+    &__title{
+        font-family: $open;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: $title-color2; 
+        margin-top: 7px;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__image-area{
+        img{
+            @media #{$sm}{
+                width: 550px;
+                height: 550px;
+            }
+            @media #{$xs}{
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+    &__content{
+        padding-top: 14px;
+        @media #{$md,$sm,$xs}{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+    }
+    &__content1{
+        display: flex;
+        margin-left: -27%;
+        margin-bottom: 84px;
+        @media #{$md,$sm,$xs}{
+            margin-left: 0%;
+        }
+        &--icon{
+            margin-right: 35px;
+            @media #{$md,$sm,$xs}{
+                margin-right: 0%;
+            }
+
+            &-1{
+                position: relative;
+                background-image: -moz-linear-gradient( 120deg, rgb(43,112,250) 0%, rgb(132,188,250) 100%);
+                background-image: -webkit-linear-gradient( 120deg, rgb(43,112,250) 0%, rgb(132,188,250) 100%);
+                background-image: -ms-linear-gradient( 120deg, rgb(43,112,250) 0%, rgb(132,188,250) 100%);
+                box-shadow: 0px 6px 10px 0px rgba(16, 73, 189, 0.3);
+                border-radius: 50%;
+                width: 66px;
+                height: 66px;
+                span{
+                    font-size: 20px;
+                    color: $background-color-4;
+                    position: absolute;
+                    height: 17px;
+                    left: 23px;
+                    top: 20px;
+                }
+
+            }
+        }
+        &--content{
+            margin-left: 25px;
+            h4{
+                font-family: $open;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 25px;
+                letter-spacing: -10;
+                color: $title-color2;  
+            }
+            p{
+                font-family: $open;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 22px;
+                color: $paragraph-color2; 
+            }
+        }
+    }
+    &__content2{
+        display: flex;
+        margin-bottom: 84px;
+        &--icon{
+            margin-right: 30px;
+
+            &-2{
+                position: relative;
+                background-image: -moz-linear-gradient( 120deg, rgb(248,69,45) 0%, rgb(247,184,175) 100%);
+                background-image: -webkit-linear-gradient( 120deg, rgb(248,69,45) 0%, rgb(247,184,175) 100%);
+                background-image: -ms-linear-gradient( 120deg, rgb(248,69,45) 0%, rgb(247,184,175) 100%);
+                box-shadow: 0px 6px 10px 0px rgba(189, 35, 15, 0.3);
+                border-radius: 50%;
+                width: 66px;
+                height: 66px;
+                span{
+                    font-size: 20px;
+                    color: $background-color-4;
+                    position: absolute;
+                    height: 17px;
+                    left: 23px;
+                    top: 20px;
+                }
+
+            }
+        }
+        &--content{
+            h4{
+                font-family: $open;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 25px;
+                letter-spacing: -10;
+                color: $title-color2;  
+            }
+            p{
+                font-family: $open;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 22px;
+                color: $paragraph-color2; 
+            }
+        }
+    }
+    &__content3{
+        display: flex;
+        margin-bottom: 84px;
+        &--icon{
+            margin-right: 30px;
+
+            &-3{
+                position: relative;
+                background-image: -moz-linear-gradient( 120deg, rgb(49,195,105) 0%, rgb(160,234,194) 100%);
+                background-image: -webkit-linear-gradient( 120deg, rgb(49,195,105) 0%, rgb(160,234,194) 100%);
+                background-image: -ms-linear-gradient( 120deg, rgb(49,195,105) 0%, rgb(160,234,194) 100%);
+                box-shadow: 0px 6px 10px 0px rgba(15, 189, 82, 0.3);
+                border-radius: 50%;
+                width: 66px;
+                height: 66px;
+                span{
+                    font-size: 20px;
+                    color: $background-color-4;
+                    position: absolute;
+                    height: 17px;
+                    left: 23px;
+                    top: 20px;
+                }
+
+            }
+        }
+        &--content{
+            h4{
+                font-family: $open;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 25px;
+                letter-spacing: -10;
+                color: $title-color2;  
+            }
+            p{
+                font-family: $open;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 22px;
+                color: $paragraph-color2; 
+            }
+        }
+    }
+    &__content4{
+        display: flex;
+        margin-left: -27%;
+        margin-bottom: 84px;
+        @media #{$md,$sm,$xs}{
+            margin-left: 0%;
+        }
+        &--icon{
+            margin-right: 35px;
+            @media #{$md,$sm,$xs}{
+                margin-right: 0%;
+            }
+
+            &-4{
+                position: relative;
+                background-image: -moz-linear-gradient( 120deg, rgb(155,44,250) 0%, rgb(216,170,255) 100%);
+                background-image: -webkit-linear-gradient( 120deg, rgb(155,44,250) 0%, rgb(216,170,255) 100%);
+                background-image: -ms-linear-gradient( 120deg, rgb(155,44,250) 0%, rgb(216,170,255) 100%);
+                box-shadow: 0px 6px 10px 0px rgba(108, 15, 189, 0.3);
+                border-radius: 50%;
+                width: 66px;
+                height: 66px;
+                span{
+                    font-size: 20px;
+                    color: $background-color-4;
+                    position: absolute;
+                    height: 17px;
+                    left: 23px;
+                    top: 20px;
+                }
+
+            }
+        }
+        &--content{
+            margin-left: 25px;
+            h4{
+                font-family: $open;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 25px;
+                letter-spacing: -10;
+                color: $title-color2;  
+            }
+            p{
+                font-family: $open;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 22px;
+                color: $paragraph-color2; 
+            }
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            z-index: -1;
+        }
+        .step__shape-2{
+            top: 29%;
+            left: 50.3%;
+            @media #{$lg,$md,$sm,$xs}{
+                display: none;
+            }
+        }
+    }
+}

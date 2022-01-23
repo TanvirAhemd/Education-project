@@ -1,0 +1,224 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  instructor CSS START
+/*----------------------------------------*/
+
+.instructor{
+    &__area{
+        background-color: $background-color-17;
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1340px;
+        }   
+    }
+    &__pre-title{
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 600;
+        color: $title-color3;
+    }
+    &__title{
+        margin-top: 7px;
+        font-family: $open;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: $title-color2; 
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        &-1{
+            img{
+                background-size: cover;
+                border: 5px solid $background-color-4;
+                border-radius: 50%;
+                width: 170px;
+                height: 170px;
+            }
+        }
+        &-2{
+            margin-top: 15px;
+            h4{
+                a{
+                    font-family: $open;
+                    font-size: 20px;
+                    font-weight: 800;
+                    letter-spacing: -10;
+                    color: $title-color2;
+                    &:hover {
+                        color: $title-color3;
+                    }  
+                }
+            }
+            p{
+                margin-top: -11px;
+                font-family: $open;
+                font-size: 14px;
+                font-weight: 500;
+                color: $color13; 
+            }
+        }
+        &-3{
+            margin-top: -9px;
+            & ul {
+                & li {
+                    display: inline-block;
+    
+                    &:not(:last-child) {
+                        margin-right: 7px;
+                    }
+    
+                    & a {
+                        font-family: $open;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #58606c;
+                        display: inline-block;
+                        text-align: center;
+
+    
+                        &:hover {
+                            color: $title-color3;
+                            @include transition(.3s);
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 30px 40px 0px rgba(1, 11, 60, 0.06);
+            width: 100%;
+            height: 100%;
+            @include transition(.3s);
+        }
+    }
+}
+
+
+
+/*----------------------------------------*/
+/*  instructor2 CSS START
+/*----------------------------------------*/
+.Instructor2{
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__pre-title{
+        font-family: $Norican;
+        font-size: 24px;
+        font-weight: 400;
+        color: #fd4680;
+    }
+    &__title{
+        margin-top: 7px;
+        font-family: $Manrope;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: #020334;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__wrapper{
+        padding: 26px 0 0px 0;
+    }
+    &__content{
+        display: flex;
+        width: 370px;
+        height: 140px;
+        background-color: rgb(255, 255, 255);
+        @include transition(.3s);
+        @media #{$xs}{
+            width: 370px;
+            width: 100%;
+            height: 140px;
+        }
+        &-1{
+            padding: 20px 30px 20px 20px;
+            img{
+                background-size: cover;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &-2{
+            h4{
+                a{
+                    font-family: $Manrope;
+                    font-size: 20px;
+                    font-weight: 800;
+                    letter-spacing: -10;
+                    color: $title-color2;
+                    &:hover {
+                        color: #fd4680;
+                        @include transition(.3s);
+                    }  
+                }
+            }
+            p{
+                font-family: $Manrope;
+                font-size: 14px;
+                font-weight: 500;
+                color: #4b4b57; 
+                margin-top: -10px;
+            }
+        }
+        &-3{
+            margin-top: -10px;
+            & ul {
+                & li {
+                    display: inline-block;
+    
+                    &:not(:last-child) {
+                        margin-right: 7px;
+                    }
+    
+                    & a {
+                        font-family: $open;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #58606c;
+                        display: inline-block;
+                        text-align: center;
+                        @include transition(.1s);
+
+    
+                        &:hover {
+                            color: #fd4680;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            box-shadow: 0px 30px 40px 0px rgba(0, 21, 81, 0.1);
+            margin-top: -10px;
+        }
+    }
+}

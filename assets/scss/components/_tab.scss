@@ -1,0 +1,235 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  Tab CSS START
+/*----------------------------------------*/
+
+.tab{
+    &__area{
+        background-color: $background-color-17;
+        overflow: hidden;
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1200px;
+        }   
+    }
+    &__pre-title{
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 30px;
+        color: $background-color-5;
+        margin-bottom: 30px;
+    }
+    &__title{
+        margin: 11px 0 17px;
+        font-family: $open;
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 44px;
+        letter-spacing: -20;
+        color: $title-color2; 
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__menu{
+        button{
+            width: 90px;
+            height: 25px;
+            border-radius: 12px;
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -20;
+            color: $color11; 
+            background-color: $background-color-17;
+            &:not(:last-child){
+                margin-right: 4px;
+            }
+            &:hover{
+                width: 90px;
+                border-radius: 12px;
+                background-color: $background-color-5;
+                color: $background-color-4;
+            }
+
+        }
+    }
+    &__item{
+        display: flex;
+        width: 570px;
+        height: 280px;
+        background-color: $background-color-4;
+        border-radius: 10px;
+        @media #{$xl}{
+            max-width: 540px;
+        }
+        @media #{$lg}{
+            max-width: 450px;
+        }
+        @media #{$md,$sm}{
+            width: 100%;
+        }
+        @media #{$xs}{
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+    &__thumb{
+        img{
+            width: 262px;
+            height: 280px;
+            border-radius: 10px 0 0 10px;
+            @media #{$xl}{
+                width: 250px;
+            }
+            @media #{$lg}{
+                width: 200px;
+            }
+            @media #{$md,$sm}{
+                width: 100%;
+            }
+            @media #{$xs}{
+                width: 180px;
+                height: 100%;
+            }
+        }
+    }
+    &__content{
+        padding: 28px 0 0 30px;
+        &-1{
+            display: flex;
+            padding-bottom: 3px;
+            &--item1{
+                position: relative;
+                background-color: $background-color-10;
+                border-radius: 50%;
+                width: 34px;
+                height: 34px;
+                img{
+                    position: absolute;
+                    height: 17px;
+                    left: 8px;
+                    top: 8px;
+                }
+                span{
+                    position: absolute;
+                    left: 40px;
+                    top: 5px;
+                    font-family: $open;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #484959;
+                }
+            }
+            &--item2{
+                margin-left: 80px;
+                position: relative;
+                background-color: $background-color-10;
+                border-radius: 50%;
+                width: 34px;
+                height: 34px;
+                @media #{$md}{
+                    margin-left: 120px;
+                }
+                @media #{$xs}{
+                    margin-left:0px;
+                    display: none;
+                }
+                img{
+                    position: absolute;
+                    height: 17px;
+                    left: 8px;
+                    top: 8px;
+                }
+                span{
+                    position: absolute;
+                    left: 40px;
+                    top: 5px;
+                    font-family: $open;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #484959;
+                }
+            }
+        }
+        &-2{
+            padding-bottom: 12px;
+            &-title{
+                font-family: $open;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 26px;
+                letter-spacing: -30;
+                color: $title-color2;
+            }
+        }
+        &-3{
+            padding-bottom: 43px;
+            @media #{$xs}{
+                padding-bottom: 20px;
+            }
+            span{
+                margin-left: 10px;
+                font-family: $open;
+                font-size: 15px;
+                font-weight: 700;
+                letter-spacing: -10;
+                color: $color7; 
+            }
+        }
+        &-4{
+            padding-top: 12px;
+            display: flex;
+            border-top: 1px solid $border;
+            &--item1{
+                span{
+                    font-family: $open;
+                    font-size: 18px;
+                    font-weight: 700;
+                    letter-spacing: -20;
+                    color: $title-color2;
+                }
+            }
+            &--item2{
+                @media #{$xs}{
+                    display: none;
+                }
+                img{
+                    margin-left: 110px;
+                    height: 20px;
+                    vertical-align: text-top;
+                    @media #{$lg}{
+                        margin-left: 70px;
+                    }
+                    @media #{$md}{
+                        margin-left: 120px;
+                    }
+                    @media #{$sm}{
+                        margin-left: 60px;
+                    }
+                    @media #{$xs}{
+                        margin-left: 0px;
+                    }
+                }
+                span{
+                    margin-left: 5px;
+                    font-family: $open;
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: -10;
+                    color: $paragraph-color4;
+                }
+            }
+        }
+    }
+}

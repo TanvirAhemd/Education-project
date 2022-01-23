@@ -1,0 +1,369 @@
+@use './variable' as *;
+@use './mixins' as *;
+
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ body {
+	font-family: $open;
+	font-size: 15px;
+	font-weight: normal;
+	color: $body-text-color;
+	line-height: 26px;
+}
+a{
+	text-decoration: none;
+}
+
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+img{
+	opacity: 1;
+}
+
+
+a,
+.btn,
+button,
+span,
+p,
+i,
+input,
+select,
+textarea,
+li,
+img,
+*::after,
+*::before,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include transition(.3s);
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover
+{
+	color: inherit;
+	text-decoration: none;
+}
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+}
+button:hover{
+	cursor: pointer;
+}
+button:focus{outline: 0; border:0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $open;
+	color: $heading-color;
+	margin-top: 0px;
+	font-weight: 700;
+	@include transition(.3s);
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+}
+
+
+*::-moz-selection {
+	background: $w-purple;
+	color: $white;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $w-purple;
+	color:$white;
+	text-shadow: none;
+}
+::selection {
+	background: $w-purple;
+	color: $white;
+	text-shadow: none;
+}
+
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+
+.z-index-1{
+	z-index: 1;
+}
+
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+.white-bg {
+	background:$white;
+}
+
+//extra padding and margin in different sections
+.mt-400{
+	margin-top: 400px;
+}
+.pb-6{
+	padding-bottom: 6px;
+}
+.mb-210{
+	margin-bottom: 205px;
+
+}
+.mb-21{
+	margin-bottom: 25px;
+}
+.mb-7{
+	margin-bottom: 7px;
+}
+.mb-6{
+	margin-bottom: 6px;
+}
+
+
+/* theme btn */
+
+.w-btn{
+	cursor: pointer;
+	font-size: 15px;
+	color: #ffffff;
+	background: #2a6df5;
+	border: 2px solid #ebebf1;
+	text-align: center;
+	padding: 0 30px;
+	display: inline-block;
+	font-weight: 600;
+	@include border-radius(25px);
+	@include transition(.3s);
+	&:hover{
+		background-color: #ffffff;
+		color: #020334;
+	}
+	&-2{
+		font-size: 15px;
+		padding: 12px 37px;
+		border: 2px solid #2a6df5;
+		&:hover{
+			border: 2px solid rgba(15, 22, 41, 0.078);
+			background-color: #ffffff;
+			color: #020334;
+		}
+	}
+	&-3{
+		padding: 7px 28px;
+		@include border-radius(22px);
+		color: $white;
+	    background: #2a6df5;
+		border: 2px solid #2a6df5;
+		&:hover{
+			border: 2px solid rgba(15, 22, 41, 0.078);
+			background-color: #ffffff;
+			color: #020334;
+		}
+	}
+	&-4{
+		padding: 8px 41px;
+		@include border-radius(22px);
+		background: $white;
+		color: #020334;
+		border: 2px solid rgba(15, 22, 41, 0.078);
+		&:hover{
+			border-color: #2a6df5;
+			color: $white;
+	        background: #2a6df5;
+		}
+	}
+	&-5{
+		padding: 8px 31px;
+		@include border-radius(22px);
+		background: $white;
+		color: #020334;
+		border: 2px solid rgba(15, 22, 41, 0.078);
+		&:hover{
+			border-color: #2a6df5;
+			color: $white;
+	        background: #2a6df5;
+			border: 2px solid #2a6df5;
+		}
+	}
+	&-8{
+		color: #020334;
+		background: $white;
+		padding: 3px 31px;
+		&:hover{
+			border-color: #2a6df5;
+			color: $white;
+	        background: #2a6df5;
+		}
+	}
+	&-9{
+		padding: 7px 40px;
+		@include border-radius(22px);
+		color: $white;
+	    background: #2a6df5;
+		border: 2px solid #2a6df5;
+		&:hover{
+			border: 2px solid rgba(15, 22, 41, 0.078);
+			background-color: #ffffff;
+			color: #020334;
+		}
+	}
+	&-11{
+		height: 40px;
+		line-height: 36px;
+		padding: 0 17px;
+		background: #2a6df5;
+		color: #ffffff;
+		border-radius: 6px;
+		border: 2px solid #2a6df5;
+
+		&:hover{
+			border: 2px solid #ebebf1;
+			background-color: transparent;
+			color: #020334;
+		}
+	}
+	&-12{
+		height: 40px;
+		line-height: 36px;
+		padding: 0 17px;
+		background: #fd4680;
+		color: #ffffff;
+		border-radius: 0px;
+		border: 2px solid #fd4680;
+
+		&:hover{
+			border: 2px solid rgb(234, 236, 242);
+			background-color: transparent;
+			color: #020334;
+		}
+	}
+	&-16{
+		padding: 9px 31px;
+		@include border-radius(0px);
+		background-color:#fd4680;
+		color: #ffffff !important;
+		border: 2px solid #fd4680;
+		&:hover{
+			border: 2px solid rgb(234, 236, 242);
+			color: #020334 !important;
+			background-color: transparent;
+		}
+	}
+
+	&-blue{
+		padding: 10px 20px;
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		background: #ffffff;
+		color: #020334;
+		&-header{
+			height: 40px;
+			padding: 0 20px;
+			line-height: 40px;
+			background: #ffffff;
+			color: #020334;
+			border: rgba(15, 22, 41, 0.078);
+		}
+		&:hover{
+			background-color: #2a6df5;
+		}
+		&-2{
+			padding: 10px 20px;
+			background: #ffffff;
+			color: #020334;
+			border-color: rgba(15, 22, 41, 0.078);;
+			&:hover{
+				border-color: rgba(15, 22, 41, 0.078);;
+				color: $white;
+			}
+		}
+	}
+}
+
+
+// screen width
+@media (min-width: 1600px) {
+	.container {
+		max-width: 1425px;
+	}
+}
+

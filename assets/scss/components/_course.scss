@@ -1,0 +1,326 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  04. course CSS START
+/*----------------------------------------*/
+
+.course{
+    &__area{
+        padding-top: 117px;
+        background-color: $background-color-6;
+
+        @media #{$md}{
+            padding-top: 130px;
+            
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1200px;
+        }   
+    }
+    &__subtitle{
+        margin-bottom: 1px;
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 500;
+        color: $title-color3;
+    }
+    &__title{
+        font-family: $open;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: $title-color2;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+
+    }
+    &__card{
+        background-color: $background-color-4;
+        border: 1px solid $border;
+        box-shadow: 0px 20px 60px 0px rgba(0, 15, 56, 0.1);
+        border-radius: 10px;
+        height: 460px;
+        width: 370px;
+        @media #{$xl}{
+            width: 350px;
+        }
+        @media #{$lg}{
+            width: 370px;
+        }
+        @media #{$md}{
+            height: 470px;
+            width: 320px;
+        }
+        @media #{$sm}{
+            height: 470px;
+            width: 420px;
+        }
+        @media #{$xs}{
+            height: 470px;
+            width: 100%;
+        }
+        
+    }
+    &__thumb{
+        img{
+            border-radius: 10px 10px 0 0;
+            width: 370px;
+            height: 247px;
+            object-fit: cover;
+            @media #{$xl}{
+                width: 350px;
+            }
+            @media #{$lg}{
+                width: 370px;
+            }
+            @media #{$md}{
+                width: 320px;
+            }
+            @media #{$sm}{
+                width: 420px;
+            }
+            @media #{$xs}{
+                width: 100%;
+            }
+            
+            &:hover{
+                @include transform(scale(1.1));
+            }
+            
+        }
+
+    }
+    &__card-content{
+        margin-top: 24px;
+        padding: 0 10px 0 29px;
+        margin-bottom: 30px;
+    }
+    &__card-pre--title{
+        font-family: $open;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 28px;
+        border: 1px solid $border-color2;
+        
+        padding: 2px 12px; 
+        &-color-1{
+          color: $color1;
+          background-color: $background-color-7;
+          border-radius: 12px;
+          padding: 2px 12px;
+        }
+        &-color-2{
+          color: $color2;
+          background-color: $background-color-8;
+          border-radius: 12px;
+          padding: 2px 12px;
+        }
+        &-color-3{
+            color: $color3;
+            background-color: $background-color-9;
+            border-radius: 12px;
+            padding: 2px 12px;
+        }
+        &-color-4{
+            color: $color4;
+            background-color: $background-color-10;
+            border-radius: 12px;
+            padding: 2px 12px;
+        }
+        &-color-5{
+            color: $color5;
+            background-color: $background-color-11;
+            border-radius: 12px;
+            padding: 2px 12px;
+        }
+        &-color-6{
+            color: $color6;
+            background-color: $background-color-12;
+            border-radius: 12px;
+            padding: 2px 12px;
+        }
+        
+    }
+    &__card-title{
+        font-family: $open;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-top: 8px;
+        :hover{
+            color: $color4;
+        }
+    }
+    &__card-icon{
+        margin-top: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+        &--1{
+            position: relative;
+            background-color: $background-color-10;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+
+            img {
+                position: absolute;
+                height: 17px;
+                left: 8px;
+                top: 8px;
+            }
+
+            span {
+                position: absolute;
+                left: 40px;
+                top: 5px;
+            }
+        }
+        &--2{
+            position: relative;
+            background-color: $background-color-14;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+
+            img {
+                position: absolute;
+                height: 17px;
+                left: 8px;
+                top: 8px;
+            }
+
+            span {
+                position: absolute;
+                left: 40px;
+                top: 5px;
+            }
+        }
+        &--3{
+            .course__tag{
+                font-family: $open;
+                font-size: 18px;
+                font-weight: 800;
+                color: $color7;
+                padding-right: 15px;
+            }
+            img {
+                object-fit: cover;
+                object-position: 15% 21%;
+                border-radius: 50%;
+                width: 34px;
+                height: 34px;
+
+            }
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            z-index: 1;
+        }
+        .course-book-1{
+            left: 5%;
+            bottom: 40%;
+            -webkit-animation: course-book-1 3s linear infinite alternate;
+            -moz-animation: course-book-1 3s linear infinite alternate; 
+            -o-animation: course-book-1 3s linear infinite alternate;
+            animation: course-book-1 3s linear infinite alternate;
+            @media #{$lg}{
+                display: none;
+            }
+            @media #{$md}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .course-book-2{
+            right: 0;
+            top: 20%;
+            -webkit-animation: course-book-2 3s linear infinite alternate;
+            -moz-animation: course-book-2 3s linear infinite alternate; 
+            -o-animation: course-book-2 3s linear infinite alternate;
+            animation: course-book-2 3s linear infinite alternate;
+            @media #{$lg}{
+                display: none;
+            }
+            @media #{$md}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+    }
+}
+.course__card-pre--title-hover-1{
+    &:hover{
+        background-color: $color1;
+        color: $color8;
+    }
+}
+.course__card-pre--title-hover-2{
+    &:hover{
+        background-color: $color2;
+        color: $color8;
+    }
+}
+.course__card-pre--title-hover-3{
+    &:hover{
+        background-color: $color3;
+        color: $color8;
+    }
+}
+.course__card-pre--title-hover-4{
+    &:hover{
+        background-color: $color4;
+        color: $color8;
+    }
+}
+.course__card-pre--title-hover-5{
+    &:hover{
+        background-color: $color5;
+        color: $color8;
+    }
+}
+.course__card-pre--title-hover-6{
+    &:hover{
+        background-color: $color6;
+        color: $color8;
+    }
+}
+@keyframes course-book-1{
+    0%{
+      transform: translateY(-50px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}
+
+@keyframes course-book-2{
+    0%{
+      transform: translateY(-50px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}

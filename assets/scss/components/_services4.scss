@@ -1,0 +1,185 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  03. SERVICES CSS START
+/*----------------------------------------*/
+.services4{
+
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px; 
+        }   
+    }
+    &__area{
+        
+        overflow: hidden;
+        background-color: $background-color-4;
+    }
+    &__title-wrapper{
+        margin-bottom: 45px;
+    }
+    &__subtitle {
+        font-family: $Dancing;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fd4680;
+        margin-bottom: 0px;
+
+    }
+
+    &__title-1 {
+        font-family: $Manrope;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: #020334;
+        padding-bottom: 8px;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__item{
+        height: 330px;
+        width: 270px;
+        position: relative;
+        z-index: 1;
+        border-radius: 6px;
+        border: 2px solid  rgb(241, 243, 248);
+        @media #{$lg}{
+            width: 100%;
+            
+        }
+        @media #{$sm}{
+            width: 270px;
+            width: 100%;
+        }
+        @media #{$xs}{
+            width: 100%;
+        }
+
+        &.active,
+        &:hover {
+            box-shadow: 0px 20px 40px 0px rgba(0, 16, 35, 0.1);
+            border: 2px solid $white;
+            margin-top: -10px;
+        }
+        .red-color{
+            background-color: #fff8fa;
+        }
+        .yellow-color{
+            background-color: #fff9f1;
+        }
+        .green-color{
+            background-color: #f2fbf3;
+        }
+
+    }
+    &__icon{
+        margin: 44px 0 0 65px;
+        width: 130px;
+        height: 130px;
+        background-color: #f5fcfc;
+        border-radius: 50%;
+        position: relative;
+        @media #{$xs}{
+            margin: 44px 0 0 37%;
+        }
+        
+        img{
+            height: 64px;
+            width: 55px;
+            position: absolute;
+            top: 25%;
+            left: 29%;
+        }
+    }
+    &__content{
+        margin-bottom: 42px;
+    }
+    &__title {
+        font-family: $Manrope;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: #020334;
+        margin-bottom: 7px;
+    }
+    &__paragraph{
+        font-family: $Manrope;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #4b4b57;
+    }
+    &__inner{       
+        position: relative;
+        z-index: 1;
+        &::before{
+            position: absolute;
+            content: "";
+            left: 0px;
+            right: 0;
+            top: 10px;
+            border-radius: 6px;
+            background: #fd4680;
+            height: 50%;
+            width: 270px;
+            z-index: -10;
+            @media #{$xl}{
+                left: 1px;
+                width: 268px;
+            }
+            @media #{$lg}{
+                left: 1px;
+                width: 215px;
+            }
+            @media #{$md}{
+                left: 1px;
+                width: 228px;
+            }
+            @media #{$sm}{
+                left: 1px;
+                width: 228px;
+            }
+            @media #{$xs}{
+                left: 1px;
+                width: 99%;
+            }
+        }
+        &:hover,
+        &.active{
+            &::before{
+                top: -3px;
+                
+            }
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+        }
+        &-1{
+            top: 22%;
+            right: 8%;
+            -webkit-animation: hero-leaf 3s linear infinite alternate;
+            -moz-animation: hero-leaf 3s linear infinite alternate; 
+            -o-animation: hero-leaf 3s linear infinite alternate;
+            animation: hero-leaf 3s linear infinite alternate;
+        }
+        &-2{
+            top: 22%;
+            left: 3%;
+            -webkit-animation: hero-leaf 3s linear infinite alternate;
+            -moz-animation: hero-leaf 3s linear infinite alternate; 
+            -o-animation: hero-leaf 3s linear infinite alternate;
+            animation: hero-leaf 3s linear infinite alternate;
+        }
+    }
+    
+}

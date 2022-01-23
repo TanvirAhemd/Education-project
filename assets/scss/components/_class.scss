@@ -1,0 +1,177 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+
+/*----------------------------------------*/
+/*   Class CSS START
+/*----------------------------------------*/
+
+
+.class{
+    &__area{
+        overflow: hidden;
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        &__area-width{
+            max-width: 1195px;
+        }   
+    }
+    &__container{
+        display: flex;
+        background-color: #ffffff;
+        width: 970px;
+        height: 280px;
+        box-shadow: 0px 30px 70px 0px rgba(0, 13, 49, 0.08);
+        @media #{$md,$sm,$xs}{
+            background-color: transparent;
+        }
+    }
+    &__subtitle{
+        font-family: $Dancing;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fd4680;
+        margin-bottom: 0;
+    }
+    &__title-1{
+        padding: 0px 0 50px;
+        font-family: $Manrope;
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: #020334;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__image{
+        padding: 20px;
+        @media #{$md,$sm,$xs}{
+            display: none;
+        }
+    }
+    &__wrapper{
+        padding: 30px 0px 39px 40px;
+    }
+    &__content{
+        border-bottom: 1px solid rgb(234, 236, 242);
+        padding-bottom: 17px;
+    }
+    &__title{
+        font-family: $Manrope;
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 800;
+        letter-spacing: -10;
+        color: #020334;
+    }
+    &__paragraph{
+        font-family: $Manrope;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #4b4b57; 
+    }
+    &__schedule{
+        display: flex;
+        &-1{
+            &:not(:last-child){
+                border-right: 1px solid rgb(234, 236, 242);
+                padding-right: 40px;
+            }
+            &:not(:first-child){
+                padding-left: 40px;
+            }
+            &--item1{
+                padding-top: 18px;
+                display: block;
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #4b4b57; 
+            }
+            &--item2{
+                display: block;
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #2a6df5; 
+                padding-bottom: 18px;
+            }
+        }
+    }
+
+    &__shape{
+        & img{
+            position: absolute;
+        }
+        .class-shape-1{
+            bottom: 5%;
+            left: 9%;
+            -webkit-animation: about2-shape-1 3s linear infinite alternate;
+            -moz-animation: about2-shape-1 3s linear infinite alternate; 
+            -o-animation: about2-shape-1 3s linear infinite alternate;
+            animation: about2-shape-1 3s linear infinite alternate;
+            @media screen and (min-width: 1600px) and (max-width: 1700px) {
+                left: 14.5%;
+            }
+            @media #{$xxl}{
+                left: 6%;
+            }
+            @media #{$xl}{
+                left: 8%;
+            }
+            @media #{$lg,$md,$sm,$xs}{
+                display: none;
+            }
+        }
+        .class-shape-2{
+            top: 21%;
+            left: 10.5%;
+            -webkit-animation: about2-shape-1 3s linear infinite alternate;
+            -moz-animation: about2-shape-1 3s linear infinite alternate; 
+            -o-animation: about2-shape-1 3s linear infinite alternate;
+            animation: about2-shape-1 3s linear infinite alternate;
+            @media screen and (min-width: 1600px) and (max-width: 1700px) {
+                left: 14.5%;
+            }
+            @media #{$xxl}{
+                left: 11.5%;
+            }
+            @media #{$xl}{
+                left: 8%;
+            }
+            @media #{$lg,$md,$sm,$xs}{
+                display: none;
+            }
+        }
+        .class-shape-3{
+            bottom:10%;
+            right: 11%;
+            -webkit-animation: about2-shape-3 3s linear infinite alternate;
+            -moz-animation: about2-shape-3 3s linear infinite alternate; 
+            -o-animation: about2-shape-3 3s linear infinite alternate;
+            animation: about2-shape-3 3s linear infinite alternate;
+            @media screen and (min-width: 1600px) and (max-width: 1700px) {
+                left: 33.5%;
+            }
+             @media #{$xxl}{
+                right: 8%;
+             }
+             @media #{$lg,$md,$sm,$xs}{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,495 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+
+/*----------------------------------------*/
+/*  03. HERO CSS START
+/*----------------------------------------*/
+
+.hero {
+    &__width{
+        max-width: 1425px;
+    }
+    &__area {
+        height: 870px;
+        overflow: hidden;
+        
+        .hero__content {
+            @media #{$sm}{
+                padding-bottom: 500px;
+            }
+            @media #{$xs}{
+                padding-bottom: 500px;
+            }
+
+            .hero__title {
+                font-family: $open;
+                font-size: 54px;
+                font-weight: 800;
+                line-height: 64px;
+                letter-spacing: -10;
+                color: $title-color1;
+                @media #{$xxl}{
+                    line-height: 54px;
+                    font-size: 44px;
+                }
+                @media #{$xl}{
+                    line-height: 54px;
+                    font-size: 44px;
+                }
+                @media #{$lg}{
+                    line-height: 54px;
+                    font-size: 44px;
+                }
+                @media #{$md}{
+                    line-height: 50px;
+                    font-size: 34px;
+                }
+                @media #{$sm}{
+                    line-height: 50px;
+                    font-size: 34px;
+                }
+                @media #{$xs}{
+                    line-height: 40px;
+                    font-size: 28px;
+                }
+
+            }
+
+            .hero__paragraph {
+                margin-top: 11px;
+                margin-bottom: 40px;
+                font-family: $open;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                color: $paragraph-color1;
+                @media #{$xl}{
+                    line-height: 24px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .hero__image-1{
+            position: absolute;
+            bottom: -33px;
+            left: 756px;
+            @media screen and (min-width: 1600px) and (max-width: 1800px) {
+               left:700px;
+            }
+            @media #{$xxl}{
+                left: 560px;
+            }
+            @media #{$xl}{
+                left: 480px;
+            }
+            @media #{$lg}{
+                left: 500px;
+            }
+            @media #{$md}{
+               left: 440px;
+            }
+            @media #{$sm}{
+                left: 190px;
+             }
+             @media #{$xs}{
+                left: 40px;
+             } 
+            
+            img{
+                max-width:600px;
+                height: 810px;
+                @media screen and (min-width: 1600px) and (max-width: 1800px) {
+                    max-width: 550px;
+                    height: 760px;
+
+                }
+                @media #{$xxl}{
+                    max-width: 500px;
+                    height: 760px;
+                }
+                @media #{$xl}{
+                    max-width: 500px;
+                    height: 760px;
+                }
+                @media #{$xl}{
+                    max-width: 440px;
+                    height: 710px;
+                }
+                @media #{$lg}{
+                    max-width: 500px;
+                    height: 730px;
+                }
+                @media #{$md}{
+                    max-width: 400px;
+                    height: 650px;
+                }
+                @media #{$sm}{
+                    max-width: 400px;
+                    height: 650px;
+                }
+                @media #{$xs}{
+                    max-width: 400px;
+                    height: 550px;
+                }
+            }
+
+        }
+
+        .hero__card {
+            position: absolute;
+            top: 230px;
+            right: 172px;
+            width: 300px;
+            background-color: #ffffff;
+            border: 1px solid $border;
+            box-shadow: 0px 20px 60px 0px rgba(0, 15, 56, 0.1);
+            border-radius: 10px;
+            -webkit-animation: hero-card 3s linear infinite alternate;
+            -moz-animation: hero-card 3s linear infinite alternate; 
+            -o-animation: hero-card 3s linear infinite alternate;
+            animation: hero-card 3s linear infinite alternate;
+            @media screen and (min-width: 1600px) and (max-width: 1800px) {
+                right: 68px;
+
+            }
+            @media #{$xxl}{
+                width: 250px;
+                right: 67px;
+            }
+            @media #{$xl}{
+                width: 250px;
+                right: 27px;
+            }
+            @media #{$lg}{
+                display: none;
+            }
+            @media #{$md}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+
+            .hero__thumb {
+                img{
+                    border-radius: 10px 10px 0 0;
+                }
+                .hero__tag {
+                    border-radius: 50%;
+                    background-color: $background-color-2;
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    right: 29px;
+                    bottom: -23px;
+
+                    .hero__dollar {
+                        color: #ffffff;
+                        position: absolute;
+                        top: 12px;
+                        left: 10px;
+
+                    }
+                }
+            }
+
+            .hero__card-content {
+                margin-top: 24px;
+                padding-left: 29px;
+                margin-bottom: 30px;
+
+                .hero__card-pre--title {
+
+                    font-family: $open;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    color: $pre-title-color1;
+                    background-color: $background-color-3;
+                    border-radius: 12px;
+                    padding: 2px 12px;
+
+                }
+
+                .hero__card-title {
+
+                    font-family: $open;
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: 30px;
+                    margin-top: 8px;
+                }
+
+                .hero__card-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-right: 20px;
+                    padding-top: 7px;
+
+                    .hero__card-icon--1 {
+                        position: relative;
+                        background-color: #f2f6fe;
+                        border-radius: 50%;
+                        width: 34px;
+                        height: 34px;
+
+                        img {
+                            position: absolute;
+                            height: 17px;
+                            left: 8px;
+                            top: 8px;
+                        }
+
+                        span {
+                            font-family: $open;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #4b4c57;
+                            position: absolute;
+                            left: 40px;
+                            top: 5px;
+                        }
+                    }
+
+                    .hero__card-icon--2 {
+                        position: relative;
+                        background-color: #fff9f1;
+                        border-radius: 50%;
+                        width: 34px;
+                        height: 34px;
+
+                        img {
+                            position: absolute;
+                            height: 17px;
+                            left: 8px;
+                            top: 8px;
+                        }
+
+                        span {
+                            font-family: $open;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #4b4c57;
+                            position: absolute;
+                            left: 40px;
+                            top: 5px;
+                        }
+                    }
+
+                    .hero__card-icon--3 {
+                        padding-right: 10px;
+                        img {
+                            object-fit: cover;
+                            object-position: 15% 21%;
+                            border-radius: 50%;
+                            width: 34px;
+                            height: 34px;
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            z-index: 1;
+        }
+        .hero-leaf{
+            top: 7%;
+            left: 4%;
+            -webkit-animation: hero-leaf 3s linear infinite alternate;
+            -moz-animation: hero-leaf 3s linear infinite alternate; 
+            -o-animation: hero-leaf 3s linear infinite alternate;
+            animation: hero-leaf 3s linear infinite alternate;
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+
+        }
+        .hero-circle-1{
+            left: -13%;
+            top: 70%;
+            -webkit-animation: hero-circle-1 3s linear infinite alternate;
+            -moz-animation: hero-circle-1 3s linear infinite alternate; 
+            -o-animation: hero-circle-1 3s linear infinite alternate;
+            animation: hero-circle-1 3s linear infinite alternate;
+            @media screen and (min-width: 1600px) and (max-width: 1800px) {
+                left: -14%;
+
+            }
+            @media #{$xxl}{
+                left: -15%;
+            }
+            @media #{$xl}{
+                top: 75%;
+                left: -18%;
+            }
+            @media #{$lg}{
+                top: 75%;
+                left: -23%;
+            }
+            @media #{$md}{
+                top: 78%;
+                left: -25%;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .hero-circle-2{
+            top:20%;
+            right: -30px;
+            -webkit-animation: hero-circle-1 3s linear infinite alternate;
+            -moz-animation: hero-circle-1 3s linear infinite alternate; 
+            -o-animation: hero-circle-1 3s linear infinite alternate;
+            animation: hero-circle-1 3s linear infinite alternate;
+            @media #{$xl}{
+                top:16%;
+                right: -3%;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .hero-image-1{
+            right: 30%;
+            top: 25%;
+            @media screen and (min-width: 1600px) and (max-width: 1800px) {
+                right: 26%;
+
+            }
+            @media #{$xxl}{
+                right: 25%
+            }
+            @media #{$xl}{
+                top: 25%;
+                right: 25%;
+            }
+            @media #{$lg}{
+                display: none;
+            }
+            @media #{$md}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .hero-circle-4{
+            right: 24%;
+            top: 20%;
+            @media screen and (min-width: 1600px) and (max-width: 1800px) {
+                right: 20%;
+
+            }
+            @media #{$xxl}{
+                top: 19%;
+                right: 19%;
+            }
+            @media #{$xl}{
+                right: 18%;
+            }
+            @media #{$lg}{
+                display: none;
+            }
+            @media #{$md}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .hero-circle-3{
+            right: 11%;
+            bottom: 18%;
+            -webkit-animation: hero-circle-3 8s linear 0s infinite alternate;
+            -moz-animation: hero-circle-3 8s linear 0s infinite alternate; 
+            -o-animation: hero-circle-3 8s linear 0s infinite alternate;
+            animation: hero-circle-3 8s linear 0s infinite alternate; 
+            @media #{$lg}{
+                display: none;
+            }
+            @media #{$md}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+            
+        }
+        .hero-circle-5{
+            bottom: 0;
+            z-index: -1;
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .hero-bg{
+            bottom: 0;
+            z-index: -2;
+            @media #{$xs}{
+                display: none;
+            }
+        }
+
+    }
+
+}
+@keyframes hero-leaf{
+    0%{
+      transform: translateY(-50px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}
+@keyframes hero-circle-1{
+    0%{
+      transform: translateY(0px);
+    }
+    100%{
+      transform: translateY(-50px);
+    }
+}
+@keyframes hero-circle-3{
+    0%{
+        @include transform(rotate(0deg));
+    }
+    100%{
+        @include transform(rotate(360deg));
+    }
+}
+@keyframes hero-card{
+    0%{
+      transform: translateY(-13px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}

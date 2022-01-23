@@ -1,0 +1,245 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*   HERO3 CSS START
+/*----------------------------------------*/
+
+.hero3{
+    &__area{
+        overflow: hidden;
+        height: 870px;
+        @media #{$sm,$xs}{
+            height: 1200px;
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px; 
+        }   
+    }
+    &__content{
+        span{
+            font-family: $open;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2a6df5;
+        }
+        h1{
+            font-family: $open;
+            font-size: 66px;
+            line-height: 70px;
+            font-weight: 800;
+            letter-spacing: -30;
+            color: #020334;
+            padding-bottom: 8px;
+            @media #{$lg}{
+                line-height: 54px;
+                font-size: 44px;
+            }
+            @media #{$md}{
+                line-height: 50px;
+                font-size: 34px;
+            }
+            @media #{$sm}{
+                line-height: 50px;
+                font-size: 34px;
+            }
+            @media #{$xs}{
+                line-height: 40px;
+                font-size: 28px;
+            }
+
+        }
+        p{
+            font-family: $open;
+            font-size: 17px;
+            line-height: 26px;
+            font-weight: 400;
+            color: #3e3e51;
+            padding-bottom: 16px;
+        }
+        .hero3-btn{
+            font-size: 15px;
+            background-color: transparent;
+            color: #020334;
+            border: 2px solid rgba(2, 3, 52, 0.078);
+            text-align: center;
+            padding: 10px 34px;
+            display: inline-block;
+            font-weight: 600;
+            @include border-radius(6px);
+            @include transition(.3s);
+            &:hover{
+                border: 2px solid rgba(2, 3, 52, 0.078);
+                background-color: #2a6df5;
+                color: #ffffff;
+            }
+        }
+    }
+    &__image{
+        margin-left: 61px;
+        position: absolute;
+        &-1{
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+        &-2{
+            position: absolute;
+            top: 34%;
+            right: -32%;
+            -webkit-animation: hero3-image 3s linear infinite alternate;
+            -moz-animation: hero3-image 3s linear infinite alternate; 
+            -o-animation: hero3-image 3s linear infinite alternate;
+            animation: hero3-image 3s linear infinite alternate;
+            @media #{$xl,$lg,$md,$sm,$xs} {
+                display: none;
+            }
+            
+        }
+        &-course{
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0px 30px 40px 0px rgba(122, 0, 39, 0.2);
+            background-color: #fd467f;
+            top: 69.5%;
+            right: 71.5%;
+            width: 150px;
+            height: 150px;
+            -webkit-animation: hero3-image 3s linear infinite alternate;
+            -moz-animation: hero3-image 3s linear infinite alternate; 
+            -o-animation: hero3-image 3s linear infinite alternate;
+            animation: hero3-image 3s linear infinite alternate;
+            &-1{
+                span{
+                    position: absolute;
+                    font-family: $open;
+                    font-size: 40px;
+                    line-height: 20px;
+                    font-weight: 800;
+                    color: #ffffff;
+                    top: 35%;
+                    left: 20%;
+                }
+            }
+            &-2{
+                span{
+                    position: absolute;
+                    font-family: $open;
+                    font-size: 15px;
+                    line-height: 20px;
+                    font-weight: 800;
+                    color: #ffffff;
+                    top: 54%;
+                    left: 29%;
+                }
+            }
+
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            z-index: 1;
+        }
+        &-1{
+            top: 9%;
+            left: 9%;
+            -webkit-animation: hero-leaf 3s linear infinite alternate;
+            -moz-animation: hero-leaf 3s linear infinite alternate; 
+            -o-animation: hero-leaf 3s linear infinite alternate;
+            animation: hero-leaf 3s linear infinite alternate;
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+        &-2{
+            top: 52%;
+            left: 4.5%;
+            -webkit-animation: hero-leaf-2 3s linear infinite alternate;
+            -moz-animation: hero-leaf-2 3s linear infinite alternate; 
+            -o-animation: hero-leaf-2 3s linear infinite alternate;
+            animation: hero-leaf-2 3s linear infinite alternate;
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+        &-3{
+            top: 24%;
+            left: 52%;
+            -webkit-animation: hero-leaf-4 3s linear infinite alternate;
+            -moz-animation: hero-leaf-4 3s linear infinite alternate; 
+            -o-animation: hero-leaf-4 3s linear infinite alternate;
+            animation: hero-leaf-4 3s linear infinite alternate;
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+        &-4{
+            top: 14.5%;
+            right: 19%;
+            -webkit-animation: hero-leaf-4 3s linear infinite alternate;
+            -moz-animation: hero-leaf-4 3s linear infinite alternate; 
+            -o-animation: hero-leaf-4 3s linear infinite alternate;
+            animation: hero-leaf-4 3s linear infinite alternate;
+            @media #{$xl,$lg,$md,$sm,$xs} {
+               display: none;
+            }
+        }
+        &-5{
+            top: 69%;
+            right: 9%;
+            -webkit-animation: hero-leaf 3s linear infinite alternate;
+            -moz-animation: hero-leaf 3s linear infinite alternate; 
+            -o-animation: hero-leaf 3s linear infinite alternate;
+            animation: hero-leaf 3s linear infinite alternate;
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+        &-6{
+            top: 30%;
+            right: 0%;
+            -webkit-animation: hero-leaf-2 3s linear infinite alternate;
+            -moz-animation: hero-leaf-2 3s linear infinite alternate; 
+            -o-animation: hero-leaf-2 3s linear infinite alternate;
+            animation: hero-leaf-2 3s linear infinite alternate;
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes hero-leaf{
+    0%{
+      transform: translateY(-50px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}
+@keyframes hero-leaf-2{
+    0%{
+      transform: translateY(0px);
+    }
+    100%{
+      transform: translateY(-30px);
+    }
+}
+@keyframes hero3-image{
+    0%{
+      transform: translateY(-20px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}
+@keyframes hero-leaf-4{
+    0%{
+      transform: translateX(-30px);
+    }
+    100%{
+      transform: translateX(0px);
+    }
+}

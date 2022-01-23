@@ -1,0 +1,164 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  04. count2 CSS START
+/*----------------------------------------*/
+
+.count2{
+    &__area{
+        height: 600px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        transition: 800ms;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        @media #{$xs} {
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    @media #{$lg} {
+        &__width{
+            max-width: 1195px;
+        } 
+    }
+    &__content-wrapper{
+        padding: 126px 0 21px 0;
+        span{
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 600; 
+            color: #ffffff; 
+        }
+        h3{
+            font-family: $open;
+            font-size: 40px;
+            font-weight: 800; 
+            letter-spacing: -30;
+            color: #ffffff;   
+            padding-top: 3px;
+                        
+            @media #{$lg}{
+                font-size: 34px;
+            }
+            @media #{$md}{
+                font-size: 32px;
+            }
+            @media #{$sm}{
+                font-size: 26px;
+            }
+            @media #{$xs}{
+                font-size: 24px;
+            }
+        }
+    }
+    &__time-wrapper{
+        display: flex;
+        padding-bottom: 50px;
+    }
+    &__time{
+        width: 70px;
+        height: 80px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        padding: 18px 18px;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+        &--title1{
+            font-family: $open;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: 800; 
+            color: #020334; 
+            margin-bottom: 0;
+        }
+        &--title2{
+            font-family: $open;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500; 
+            color: #505059; 
+        }
+    }
+    &__time-second{
+        @media #{$xs} {
+          display: none;
+        }
+    }
+    &__btn{
+        font-size: 15px;
+        background-color: transparent;
+        color: #ffffff;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        padding: 10px 34px;
+        display: inline-block;
+        font-weight: 600;
+        @include border-radius(6px);
+        @include transition(.3s);
+        &:hover{
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background-color: #ffffff;
+            color: #020334;
+        }
+    }
+    &__video-btn--play{
+        position: absolute;
+        right: 21%;
+        top: 43%;
+        &-btn{
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            line-height: 86px;
+            text-align: center;
+            font-size: 16px;
+            color: $white;
+            @include border-radius(50%);
+            background: $white;
+            color: #fd467f;
+            border-color: $white;
+            &:hover{
+                color: #fd467f;
+            }
+            &::before{
+                content: "";
+                height: 120px;
+                width: 120px;
+                position: absolute;
+                left: -15px;
+                top: -15px;
+                border: 1px solid rgba(255, 255, 255, 0.302);
+                border-radius: 50%;
+                animation: videoBtnAnim 3s linear infinite;
+                display: block;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                transition: all 0.3s ease-in-out;
+            }
+            i{
+                z-index: 1;
+                position: relative;
+                top: 3.2px;
+                left: 2.8px;
+            }
+        }
+    }
+}

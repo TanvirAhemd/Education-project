@@ -1,0 +1,135 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  Form2 CSS START
+/*----------------------------------------*/
+
+.form2{
+    &__area{
+         background-color: #eff1f6;
+         @media #{$sm,$xs}{
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    @media #{$lg} {
+        &__width{
+            max-width: 1195px;
+        } 
+    }
+    
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 1170px;
+        height: 240px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        box-shadow: 0px 40px 50px 0px rgba(0, 15, 56, 0.2);
+        position: relative;
+        top: -120px;
+        @media #{$lg}{
+            width: 1030px;
+        }
+        @media #{$md}{
+            width: 800px;
+        }
+        &-1{
+            &--title{
+                font-family: $open;
+                font-size: 30px;
+                font-weight: 800;
+                letter-spacing: -30;
+                color: #fafafb; 
+            }
+            &--description{
+                font-family: $open;
+                font-size: 15px;
+                font-weight: 500;
+                color: #fefefe; 
+            }
+        }
+        &-2{
+            display: flex;
+            align-items: center;
+            padding: 0 70px 20px;
+            @media #{$lg}{
+                padding: 0 150px 20px;
+            }
+            @media #{$md}{
+                padding: 0 50px 20px;
+            }
+            &--container{
+                width: 270px;
+                margin-right: 10px;
+                @media #{$lg,$md}{
+                    margin-right: 180px;
+                    width: 100px;
+                    max-width: 100%;
+                }
+                select{
+                    width: 270px;
+                    height: 46px;
+                    border-radius: 6px;
+                    border: none;
+                    outline: none;
+                    option{
+                        font-family: $open;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #3e3e51;
+                        display: inline-block;
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+            }
+            &--container-2{
+                @media #{$md}{
+
+                    display: none;
+                }
+
+            }
+            &--container-3{
+                @media #{$lg,$md}{
+
+                    display: none;
+                }
+
+            }
+            &--container4{             
+                &-1{
+
+                    padding: 10px 40px;
+                    background-color: #020334;
+                    border-radius: 6px;
+                    @include transition(.3s);
+                    vertical-align: middle;
+                    @media #{$lg,$md}{
+                        padding: 10px 10px;
+
+                    }
+                    a{
+                        font-family: $open;
+                        font-size: 15px;
+                        color: #ffffff;
+                        vertical-align: middle;
+                    }
+                    &:hover{
+                        background-color: #ffffff;
+                        a{
+                            color: #020334;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

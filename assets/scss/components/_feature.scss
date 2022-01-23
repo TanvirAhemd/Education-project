@@ -1,0 +1,79 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+
+/*----------------------------------------*/
+/*  03. HERO CSS START
+/*----------------------------------------*/
+.feature{
+
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__item{
+        position: relative;
+        top: -42%;
+        width: 370px;
+        height: 250px;
+        z-index: 1;
+        padding-left: 38px;
+        border-radius: 6px;
+        box-shadow: 0px 30px 70px 0px rgba(0, 15, 56, 0.1);
+        &:not(:last-child){
+            margin-left: 70px;
+        }
+        @media #{$lg}{
+
+            width: 290px;
+        }
+        @media #{$md}{
+            width: 100%;
+            
+        }
+        @media #{$sm}{
+            width: 100%;
+            
+        }
+        @media #{$xs}{
+            width: 100%;
+            
+        }
+
+    }
+    &__item3 {
+        @media #{$md}{
+            display: none;
+        }
+        @media #{$sm}{
+            display: none;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__item2{
+
+        @media #{$xs}{
+            display: none;
+        }
+
+    }
+    &__icon{
+        padding-top: 40px;
+    }
+    &__title-1 {
+        font-family: $open;
+        font-size: 20px;
+        font-weight: 800;
+        color: $title-color2;
+        margin-bottom: 7px;
+    }
+    &__paragraph{
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $paragraph-color2;
+    }
+}

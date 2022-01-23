@@ -1,0 +1,168 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*   CATEGORY3 CSS START
+/*----------------------------------------*/
+.category3{
+    &__area{
+        background-color: #eff1f6;
+        padding: 114px 0 100px 0;
+        overflow: hidden;
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px; 
+        }   
+    }
+    &__content{
+        span{
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2a6df5;
+        }
+        h2{
+            font-family: $open;
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -30;
+            color: #020334;
+            padding-bottom: 8px;
+
+
+            
+            @media #{$lg}{
+                font-size: 34px;
+            }
+            @media #{$md}{
+                font-size: 32px;
+            }
+            @media #{$sm}{
+                font-size: 26px;
+            }
+            @media #{$xs}{
+                font-size: 24px;
+            }
+
+        }
+    }
+    &__btn{
+        margin-left: 425px;
+        font-size: 15px;
+        background-color: transparent;
+        border: 2px solid rgba(2, 3, 52, 0.078);
+        text-align: center;
+        padding: 10px 32px;
+        display: inline-block;
+        font-weight: 600;
+        @include border-radius(6px);
+        @include transition(.3s);
+        a{
+            @include transition(.1s);
+            color: #020334;
+        }
+        @media #{$xl} {
+            margin-left: 390px;
+        }
+        @media #{$lg} {
+            margin-left: 300px;
+        }
+        @media #{$md} {
+            margin-left: 175px;
+        }
+        @media #{$sm,$xs}{
+            margin-left: 0;
+            margin-bottom: 50px;
+        }
+        i{
+            @include transition(.1s);
+            margin-left: 06px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #000000;
+            vertical-align: middle;
+        }
+        &:hover{
+            border: 2px solid rgba(2, 3, 52, 0.078);
+            background-color: #2a6df5;
+            a{
+                color: #ffffff;
+            }
+            i{
+                color: #ffffff;
+            }
+        }
+    }
+    &__wrapper{
+        border-radius: 6px;
+        background-color: #ffffff;
+        width: 370px;
+        height: 100px;
+        padding: 20px 20px 20px 40px;
+        display: flex;
+        z-index: 20;
+        @media #{$lg} {
+            width: 370px;
+            max-width: 100%;
+        }
+        @media #{$md} {
+            width: 370px;
+            max-width: 100%;
+        }
+        @media #{$sm,$xs} {
+            width: 100%;
+        }
+        
+        &-1{
+            width: 56px;
+            height: 56px;
+            @include border-radius(50%);
+            border: 2px solid rgba(2, 3, 52,0.078);
+            position: relative;
+            display: inline-block;
+            @include transition(.1s);
+            img{
+                width: 27px;
+                height: 30px;
+                position: absolute;
+                top: 20%;
+                left: 23%;
+                &:not(:last-child){
+                    margin-right: 10px;
+                }
+            }
+        }
+        &-2{
+            display: inline-block;
+            margin: 6px 0 0 10px;
+            &--one{
+               h4{
+                font-family: $open;
+                font-size: 18px;
+                font-weight: 800;
+                color: #020334;
+               }
+               p{
+                margin-top: -8px;
+                font-family: $open;
+                font-size: 14px;
+                font-weight: 500;
+                color: #737383;
+                vertical-align: middle;
+               }
+
+            }
+
+        }
+        &:hover {
+            box-shadow: 0px 30px 50px 0px rgba(0, 16, 35, 0.1);
+            .category3__wrapper-1{
+                background-color: #2a6df5;
+                img{
+                    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(306deg) brightness(150%) contrast(150%);
+                }
+
+            }
+        }
+    }
+}

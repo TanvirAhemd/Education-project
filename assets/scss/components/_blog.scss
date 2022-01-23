@@ -1,0 +1,283 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  04. blog CSS START
+/*----------------------------------------*/
+.blog{
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__subtitle{
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 500;
+        color: $title-color3;
+    }
+    &__title{
+        font-family: $open;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -10;
+        color: $title-color2;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__card{
+        width:372px;
+        border-radius: 6px;
+        box-shadow: 0px 30px 60px 0px rgba(0, 15, 56, 0.1);
+        @media #{$xl,$lg,$md,$xs}{
+            width: 100%;
+        }
+        
+    }
+    &__thumb{
+        
+        position: relative;
+        overflow: hidden;
+        &--image{
+            img{
+                border-radius: 6px 6px 0 0;
+                width: 372px;
+                height: 280px;
+                @media #{$xl,$lg,$md,$xs}{
+                    width: 100%;
+                }
+                &:hover{
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+        &--pre-title{
+            font-family: $open;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+            padding: 0 12px 0 12px;
+            color: $color7;
+            background-color: $background-color-4;
+            border-radius: 12px;
+            border: 1px solid $border; 
+            position: absolute;
+            z-index: 1;
+            right: 6%;
+            top: 8%;
+            &:hover{
+                border: 1px solid $title-color3; 
+                background-color: $title-color3;
+                color: $background-color-4;
+            }
+        }
+    }
+    &__card--content{
+        padding: 20px 36px 16px 37px;
+    }
+    &__card--date{
+        font-family: $open;
+        font-size: 15px;
+        font-weight: 500;
+        color: $paragraph-color2;
+    }
+    &__card--title{
+        font-family: $open;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 28px;
+        padding: 5px 0 11px 0;
+        &:hover{
+            color:$title-color3;
+        }
+    }
+    &__card--link{
+        font-family: $open;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 28px;
+        color: $title-color2;
+        @include transition(.1s);
+        &-icon{
+            vertical-align: middle;
+            padding-left: 5px;
+            font-size: 20px;
+        }
+    }
+    &__card--link{
+
+        &:hover{
+            color:$title-color3;
+        }
+    }
+
+    &__card--icon{
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        &::before{
+            position:absolute;
+            display: inline-block;
+            content: "";
+            left: -36px;
+            bottom: 42px;
+            border-top: 1px solid rgba(15, 22, 41,0.078);
+            width: 370px;   
+            @media #{$lg,$md,$xs}{
+                display: none;
+            }
+
+        }
+        
+        &-1{
+            .icon{
+                height: 17px;
+                line-height: 10px;
+                vertical-align: sub;
+            }
+            span{
+                font-family: $open;
+                font-size: 15px;
+                font-weight: 500;
+                color: $color9;
+                padding-left: 2px;
+                line-height: 10px;
+                vertical-align: middle;
+            }
+
+        }
+        &-2{
+            display: flex;
+            &-first{
+                margin-right: 17px;
+                .icon{
+                    height: 17px;
+                }
+                span{
+                    vertical-align: middle;
+                }
+            }
+            &-second{
+                .icon{
+                    height: 17px;
+                }
+                span{
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*----------------------------------------*/
+/*  Blog2 CSS START
+/*----------------------------------------*/
+.blog2{
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__pre-title{
+        font-family: $Dancing;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fd4680;
+    }
+    &__title{
+        margin-top: 8px;
+        font-family: $Manrope;
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: #020334;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        border: 1px solid rgb(234, 236, 242);
+        @include transition(.3s);
+        &-1{
+            img{
+                width: 170px;
+                height: 180px;
+            }
+        }
+        &-2{
+            padding: 30px 50px 24px 28px;
+            span{
+                font-family: $Manrope;
+                font-size: 14px;
+                font-weight: 500;
+                color: #2a6df5;
+            }
+            h3{
+                font-family: $Manrope;
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 800;
+                letter-spacing: -20;
+                color: #020334;
+                margin-top: 3px;
+                &:hover{
+                    color: #fd4680; 
+                }
+            }
+            p{
+                font-family: $Manrope;
+                font-size: 15px;
+                line-height: 22px;
+                font-weight: 400;
+                color: #4b4b57;
+            }
+        }
+        &:hover{
+            box-shadow: 0px 30px 40px 0px rgba(0, 21, 81, 0.1);
+
+            border: 1px solid #ffffff;
+        }
+    }
+    &__btn{
+        cursor: pointer;
+        font-size: 15px;
+        background-color: transparent;
+        border: 2px solid rgb(234, 236, 242);
+        text-align: center;
+        padding: 10px 34px;
+        display: inline-block;
+        font-weight: 600;
+        @include border-radius(0px);
+        @include transition(.3s);
+        a{
+            @include transition(.1s);
+            color: #020334;
+        }
+        &:hover{
+            border: 2px solid #fd4680;
+            background-color: #fd4680;
+            a{
+                color: #ffffff;
+            }
+        }
+    }
+}

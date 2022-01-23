@@ -1,0 +1,223 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  06. event2 CSS START
+/*----------------------------------------*/
+.event2{
+    &__area{
+        padding: 111px 0 110px 0;
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__content-wrapper{
+        padding-bottom: 53px;
+        span{
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2a6df5;
+        }
+        h3{
+            padding-top: 4px;
+            font-family: $open;
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -30;
+            color: #020334;
+
+                        
+            @media #{$lg}{
+                font-size: 34px;
+            }
+            @media #{$md}{
+                font-size: 32px;
+            }
+            @media #{$sm}{
+                font-size: 26px;
+            }
+            @media #{$xs}{
+                font-size: 24px;
+            }
+        }
+    }
+    &__btn{
+        margin-left: 401px;
+        font-size: 15px;
+        border: 2px solid rgba(2, 3, 52, 0.078);
+        background-color: transparent;
+        text-align: center;
+        padding: 7px 22px;
+        display: inline-block;
+        font-weight: 600;
+        @include border-radius(6px);
+        @include transition(.3s);
+        a{
+            color: #020334;
+            @include transition(.1s);
+        }
+        @media #{$xl} {
+            margin-left: 360px;
+        }
+        @media #{$lg} {
+            margin-left: 250px;
+        }
+        @media #{$md} {
+            margin-left: 50px;
+        }
+        @media #{$sm,$xs} {
+            margin-left: 0px;
+
+        }
+        @media #{$xs} {
+            margin-bottom: 50px;
+            
+        }
+        i{
+            margin-left: 6px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #000000;
+            vertical-align: middle;
+            @include transition(.1s);
+        }
+        &:hover{
+            border: 2px solid rgba(2, 3, 52, 0.078);
+            background-color: #2a6df5;
+            a{
+                color: #ffffff;
+            }
+            i{
+                color: #ffffff;
+            }
+        }
+    }
+    &__container{
+        display: flex;
+        box-shadow: 0px 30px 50px 0px rgba(4, 5, 60, 0.1);
+        height: 310px;
+        @media #{$lg} {
+            height: 350px;
+        }
+        @media #{$md,$sm,$xs} {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto;
+        }
+    }
+    &__image{
+        img{
+            width: 520px;
+            height: 310px;
+            border-radius: 6px 0 0 6px;
+            @media #{$lg} {
+                height: 350px;
+            }
+            @media #{$md,$sm,$xs} {
+                width: 100%;
+            }
+        }
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 47px 0 47px 50px;
+        @media #{$xs} {
+            width: 100%;
+        }
+        &-1{
+            padding-bottom: 16px;
+            .red-color{
+                font-family: $open;
+                font-size: 14px;
+                font-weight: 500;
+                color: #fd4680;
+                background-color: #fff0f5;
+                padding: 4px 8px;
+                border-radius: 4px;
+            }
+            .blue-color{
+                font-family: $open;
+                font-size: 14px;
+                font-weight: 500;
+                color: #5940f4;
+                background-color: #f2f0fe;
+                padding: 4px 8px;
+                border-radius: 4px;
+            }
+        }
+        &-2{
+            display: flex;
+            padding-bottom: 3px;
+            &-item1{
+                padding-right: 30px;
+                .icon{
+                    height: 17px;
+                }
+                span{
+                    font-family: $open;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #737383;
+                }
+            }
+            &-item2{
+                .icon{
+                    height: 17px;
+                }
+                span{
+                    font-family: $open;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #737383;
+                }
+            }
+        }
+        &-3{
+            padding-bottom: 8px;
+           h3{
+            font-family: $open;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 30px;
+            letter-spacing: -30;
+            color: #020334; 
+           } 
+           p{
+            font-family: $open;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #3e3e51;  
+           }
+        }
+        &-4{
+            .btn{
+                font-size: 15px;
+                background-color: #2a6df5;
+                border: 2px solid rgba(2, 3, 52, 0.078);
+                text-align: center;
+                padding: 4px 21px;
+                display: inline-block;
+                font-weight: 600;
+                @include border-radius(6px);
+                @include transition(.3s);
+                a{
+                    @include transition(.1s);
+                    color: #ffffff;
+                }
+                &:hover{
+                border: 2px solid rgba(2, 3, 52, 0.078);
+                background-color: transparent;
+                a{
+                    color: #020334;
+                }
+                }
+            }
+        }
+    }
+
+}

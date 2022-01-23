@@ -1,0 +1,176 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  01. hero2 CSS START
+/*----------------------------------------*/
+
+.hero2{
+    &__area{
+        overflow: hidden;
+    }
+    &__width{
+        max-width: 1425px;
+    }
+
+    &__height{
+        height: 920px;
+        @media #{$sm}{
+            min-height: 700px;
+        }
+        @media #{$xs}{
+            min-height: 600px;
+        }
+    }
+    &__content{
+        padding: 194px 0 184px 0;
+        @media #{$md}{
+            padding-bottom: 207px;
+        }
+        span{
+            font-family: $open;
+            font-size: 14px;
+            font-weight: 500;
+            color: $background-color-4;
+        }
+        h1{
+            font-family: $open;
+            font-size: 64px;
+            line-height: 74px;
+            font-weight: 800;
+            letter-spacing: -30;
+            color: $background-color-4;
+            padding-bottom: 8px;
+            @media #{$md}{
+                line-height: 50px;
+                font-size: 54px;
+            }
+            @media #{$sm}{
+                line-height: 50px;
+                font-size: 34px;
+            }
+            @media #{$xs}{
+                line-height: 40px;
+                font-size: 28px;
+            }
+
+        }
+        p{
+            font-family: $open;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 400;
+            color: $background-color-4;
+            padding-bottom: 27px;
+        }
+        .slider-btn{
+            font-size: 15px;
+            color: $background-color-4;
+            border: 2px solid rgba(255, 255, 255,0.141);
+            text-align: center;
+            padding: 10px 34px;
+            display: inline-block;
+            font-weight: 600;
+            @include border-radius(25px);
+            @include transition(.3s);
+            &:hover{
+                border: 2px solid $background-color-4;
+                background-color: $background-color-4;
+                color: $color10;
+            }
+        }
+    }
+    &__change{
+        &-1{
+            border-radius: 50%;
+            background-color: transparent;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 13.3%;
+            top: 33%;
+            border: 2px solid rgba(255, 255, 255,0.141);
+            @include transition(.3s);
+            &-item{
+                font-size: 16px;
+                font-weight: 800;
+                color: $background-color-4;
+                position: absolute;
+                top: 16px;
+                left: 14px;
+                @include transition(.3s);
+            }
+            &:hover{
+                background-color: $background-color-4;
+                i{
+                    color: $color11;
+                }
+            }
+
+        }
+        &-2{
+            border-radius: 50%;
+            background-color: transparent;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 13.3%;
+            top: 40%;
+            border: 2px solid rgba(255, 255, 255,0.141);
+            &-item{
+                font-size: 16px;
+                font-weight: 800;
+                color: $background-color-4;
+                position: absolute;
+                top: 16px;
+                left: 14px;
+
+            }
+            &:hover{
+                background-color: $background-color-4;
+                i{
+                    color: $color11;
+                }
+            }
+
+        }
+    }
+    &__nav-content{
+        @media #{$sm,$xs}{
+            display: none;
+        }
+    }
+    &__nav-content-1{
+        background-color: rgba(228, 49, 112, 0.8);
+    }    
+    &__nav-content-2{
+        background-color: rgba(71, 50, 133, 0.8);
+    }
+    &__nav-content-3{
+        background-color:  rgba(205, 165, 97, 0.8);
+    }
+    &__nav-content-4{
+        background-color: rgba(42, 109, 245, 0.8);
+    }
+    &__nav-content{
+        padding: 42px 0 26px 40px;
+
+        h4{
+            font-family: $open;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -30;
+            color: $background-color-4;
+        }
+        p{
+            font-family: $open;
+            font-size: 15px;
+            font-weight: 500;
+            color: $background-color-4; 
+        }
+        i{
+            color: $background-color-4;
+            font-size: 20px;
+        }
+    }
+
+}

@@ -1,0 +1,45 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+
+.brand{
+    &__area{
+        padding: 48px 0 65px;
+    }
+    &__background{
+        background-color: $background-color-16;
+        padding-top: 48px;
+        padding-bottom: 68px;
+    }
+    
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1175px;
+        }   
+    }
+    &__content{
+        padding-bottom: 22px;
+        img{
+            margin-top: -8px;
+            display: inline-block;
+        }
+    }
+    &__title{
+        padding:  5px;
+        display: inline-block;
+        font-family: $open;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 50px;
+        color: $title-color2;
+    }
+    &__more{
+        margin-top: 52px;
+    }
+    &__padding{
+        padding-left: 30px;
+    }
+}
+.swiper-overflow-container {
+    overflow-x: hidden;
+   margin: 0 40px 0 40px;
+}

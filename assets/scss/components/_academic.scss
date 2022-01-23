@@ -1,0 +1,177 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  06. academic CSS START
+/*----------------------------------------*/
+
+
+.academic{
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__pre-subtitle{
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 500;
+        color: $title-color3;
+        padding-bottom: 4px;
+    }
+    &__title{
+        font-family: $open;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: $title-color2;
+        padding-bottom: 2px;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__wrapper{
+        position: relative;
+        display: inline-block;
+        &::before{
+            position: absolute;
+            left: 50%;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s);
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            width: 100%;
+            border-radius: 50%;
+            content: "";
+            height: 100%;
+            border: 2px solid $title-color3;
+        }
+        &:hover::before{
+            opacity: 1;
+            visibility: visible;
+        }
+        &--image{
+            img{
+                position: relative;
+                width: 210px;
+                height: 210px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &--icon-1{
+            border-radius: 50%;
+                background-color: $background-color-4;
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                left: 69%;
+                top: 66%;
+                box-shadow: 0px 20px 30px 0px rgba(0, 15, 56, 0.1);
+                &-middle{
+                    position: absolute;
+                    left: 19px;
+                    top: 16px;
+
+                }
+        }
+        &--icon-2{
+            border-radius: 50%;
+            background-color: $background-color-4;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            left: 69%;
+            top: 66%;
+            box-shadow: 0px 20px 30px 0px rgba(0, 15, 56, 0.1);
+            &-middle-2{
+              position: absolute;
+              left: 20px;
+              top: 16px;
+            }
+        }
+        &--icon-3{
+            border-radius: 50%;
+            background-color: $background-color-4;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            right: -5%;
+            top: 66%;
+            box-shadow: 0px 20px 30px 0px rgba(0, 15, 56, 0.1);
+            &-middle-3{
+              position: absolute;
+              right: 15px;
+              top: 16px;
+            }
+        }
+        &--icon-4{
+            border-radius: 50%;
+            background-color: $background-color-4;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            right: -7%;
+            top: 66%;
+            box-shadow: 0px 20px 30px 0px rgba(0, 15, 56, 0.1);
+            &-middle-4{
+              position: absolute;
+              right: 17px;
+              top: 22px;
+            }
+        }
+
+    }
+    &__round-area-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        &-1{
+            padding-top: 37px;
+            font-family: $open;
+            font-size: 20px;
+            font-weight: 800;
+            color: $title-color2;
+        }
+        &-2{
+            padding-left: 23px;
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $paragraph-color2;
+        }
+        &-3{
+            display: inline-block;
+            font-family: $open;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 28px;
+            color: $title-color2;
+            @include transition(.1s);
+            &--icon{
+                vertical-align: middle;
+                padding-left: 5px;
+                font-size: 20px;
+            }
+            &:hover{
+                color: $title-color3;
+            }
+        }
+    }
+}

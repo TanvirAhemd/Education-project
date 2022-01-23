@@ -1,0 +1,49 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  04. count CSS START
+/*----------------------------------------*/
+
+.count{
+    &__area{
+        margin-top: -66px;
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1195px;
+        }   
+    }
+    &__content{
+        &--title-1{
+            display: inline-block;
+            font-family: $open;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 28px;
+            color: $title-color2;
+        }
+        &--title-2{
+            display: inline-block;
+            font-family: $open;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 28px;
+            color: $title-color2;
+        }
+        &--plus{
+            font-family: $open;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 28px;
+            color: $title-color3;
+        }
+        &--paragraph{
+            font-family: $open;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: $paragraph-color2;
+        }
+
+    }
+}

@@ -1,0 +1,326 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/*  06. event CSS START
+/*----------------------------------------*/
+.event{
+    &__area{
+        background-color: $background-color-4;
+    }
+    @media only screen and (min-width: 1400px) {
+        &__width{
+            max-width: 1198px;
+        }   
+    }
+    &__title{
+        font-family: $open;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 44px;
+        letter-spacing: -20;
+        color: $color10;
+        padding-bottom: 10px;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__paragraph{
+        font-family: $open;
+        font-size: 16px;
+        font-weight: 400;
+        color: $paragraph-color2;
+        margin-bottom: 38px;
+    }
+    &__card-wrapper{
+        border-radius: 10px;
+        box-shadow: 0px 30px 50px 0px rgba(0, 15, 56, 0.1);
+        background-color: $background-color-4;
+    }
+    &__card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        @media #{$sm,$xs}{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 320px;
+        }
+        &--date-area{
+            padding: 38px 0 33px 26px;
+            @media #{$sm,$xs}{
+                padding-top: 15px;
+                margin-left: -50px;
+            }
+            &-1{
+                display: block;
+                font-family: $open;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 20px;
+                color: $color10;
+                margin-bottom: 8px;
+            }
+            &-2{
+                font-family: $open;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                color: $paragraph-color2;
+            }
+        }
+        &--icon-area{
+            position: relative;
+            &::before{
+                position:absolute;
+                display: inline-block;
+                content: "";
+                top: 0;
+                left: -35px;
+                bottom: 20%;
+                border-left: 1px solid rgba(15, 22, 41,0.078);
+                height: 80px; 
+                @media #{$sm,$xs}{
+                    border-left: none;
+                }
+            }
+            &-1{
+                font-family: $open;
+                font-size: 14px;
+                font-weight: 500;
+                color: $paragraph-color2;
+                padding-right: 10px;
+                vertical-align: middle;
+                .icon{
+                    height: 17px;
+                }
+            }
+            &-2{
+                font-family: $open;
+                font-size: 14px;
+                font-weight: 500;
+                color: $paragraph-color2;
+                vertical-align: middle;
+                .icon{
+                    height: 17px;
+                }
+            }
+            &-3{
+                // display: block;
+                font-family: $open;
+                font-size: 20px;
+                font-weight: 800;
+                color: $color10;
+                padding-top: 6px;
+            }
+        }
+        &--btn{
+            padding-right: 40px;
+            @media #{$sm,$xs}{
+                margin-top: 20px;
+            }
+        }
+    }
+    &__small-paragraph{
+        display: inline-block;
+        font-family: $open;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 26px;
+        color: $paragraph-color2;
+        padding: 23px 5px 0 0;
+        @media #{$lg}{
+            margin-bottom: 80px;
+         }
+        @media #{$md}{
+           margin-bottom: 80px;
+        }
+        @media #{$sm}{
+            margin-bottom: 80px;
+         }
+         @media #{$xs}{
+            margin-bottom: 80px;
+         }
+
+        &--link{
+            font-family: $open;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 26px;
+            color: $paragraph-color2;
+            @include transition(.1s);
+            &-icon{
+                vertical-align: middle;
+                padding-left: 10px;
+                font-size: 20px;
+            }
+            &:hover{
+                color:$title-color3;
+
+            }
+            
+        }
+    }
+    &__video-btn{
+        .image-background{
+            position: relative;
+            height: 650px;
+            width: 370px;
+            @media #{$xs}{
+                width: 100%;
+             }
+        }
+        &--play{
+            position: absolute;
+            z-index: 1;
+            right: 26%;
+            top: 45%;
+            @media screen and (min-width: 1700px) and (max-width: 1800px) {
+                right: 24%;
+
+            }
+            @media screen and (min-width: 1600px) and (max-width: 1700px) {
+                right: 22%;
+
+            }
+            @media screen and (min-width: 1500px) and (max-width: 1600px) {
+                right: 20%;
+
+            }
+            @media screen and (min-width: 1400px) and (max-width: 1500px) {
+                right: 18%;
+
+            }
+            @media screen and (min-width: 1300px) and (max-width: 1400px) {
+                right: 17%;
+
+            }
+            @media screen and (min-width: 1200px) and (max-width: 1300px) {
+                right: 16%;
+
+            }
+            @media screen and (min-width: 991px) and (max-width: 1200px) {
+                top: 68%;
+                right: 49%;
+
+            }
+            @media screen and (min-width: 768px) and (max-width: 990px) {
+                top: 68%;
+                right: 53%;
+
+            }
+            @media screen and (min-width: 576px) and (max-width: 767px) {
+                top: 77%;
+                right: 52%;
+
+            }
+            @media #{$xs}{
+                top: 77%;
+                right: 52%;
+             }
+            &-btn{
+                display: inline-block;
+                width: 90px;
+                height: 90px;
+                line-height: 86px;
+                text-align: center;
+                font-size: 16px;
+                color: $white;
+                @include border-radius(50%);
+                background: $white;
+                color: #2a6df5;
+                border-color: $white;
+                &:hover{
+                    color: #2a6df5;
+                }
+                &::before{
+                    content: "";
+                    height: 120px;
+                    width: 120px;
+                    position: absolute;
+                    left: -15px;
+                    top: -15px;
+                    border: 1px solid rgba(255, 255, 255, 0.302);
+                    border-radius: 50%;
+                    animation: videoBtnAnim 3s linear infinite;
+                    display: block;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    top: 0;
+                    left: 0;
+                    border-radius: 50%;
+                    transition: all 0.3s ease-in-out;
+                }
+                i{
+                    z-index: 2;
+                    position: relative;
+                    top: 3.2px;
+                    left: 2.8px;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+@-webkit-keyframes videoBtnAnim {
+	0% {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	25% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	75% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	to {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+}
+
+@keyframes videoBtnAnim {
+	0% {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	25% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	75% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	to {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+}

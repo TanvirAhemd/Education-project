@@ -1,0 +1,90 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+/*----------------------------------------*/
+/* Gallery CSS START
+/*----------------------------------------*/
+
+
+.gallery{
+    &__area{
+        overflow: hidden;
+    }
+    &__wrapper{
+        display: flex;
+        &-1{
+          background-color: #020334;
+            position: relative;
+            a {
+              img {
+                display: inline-block;
+                width: 308px;
+                max-width: 100%;
+                height: 300px;
+      
+              }
+      
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+            &-overlay-3{
+                position: absolute;
+                border: 2px solid rgba(255,255,255,0.2);
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                opacity: 0;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+                @include transition(.3s);
+
+            }
+            &-overlay-4{
+                position:absolute;
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+                @include transition(.3s);
+
+            }
+            &:hover{
+                .gallery__wrapper-1-overlay-2{
+                    opacity: 1;
+                }
+                .gallery__wrapper-1-overlay-3{
+                    opacity: 1;
+                }
+                .gallery__wrapper-1-overlay-4{
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+    @media #{$md}{
+      &__wrapper-last{
+        display: none;
+      }
+    }    
+
+    @media #{$sm,$xs}{
+        &__wrapper-last{
+          display: none;
+        }        
+        &__wrapper-middle{
+          display: none;
+        }
+
+    }
+    @media #{$xs}{
+        &__wrapper-second{
+          display: none;
+        }
+      }
+}

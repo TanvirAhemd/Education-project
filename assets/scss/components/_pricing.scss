@@ -1,0 +1,543 @@
+@use '../abstracts/variable'as *;
+@use '../abstracts/mixins'as *;
+
+/*----------------------------------------*/
+/*   Class CSS START
+/*----------------------------------------*/
+
+.pricing{
+    &__area{
+        overflow: hidden;
+        @media #{$sm,$xs}{
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        &__area-width{
+            max-width: 1195px;
+        }   
+    }
+    &__subtitle{
+        font-family: $Dancing;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fd4680;
+        margin-bottom: 4px;
+    }
+    &__title-1{
+        padding: 0px 0 53px;
+        font-family: $Manrope;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -20;
+        color: #020334;
+        @media #{$md}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 26px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__wrapper{
+        width: 1170px;
+        width: 100%;
+        box-shadow: 0px 30px 70px 0px rgba(0, 13, 49, 0.08);
+    }
+    &__header{
+        display: flex;
+        align-items: center;
+        background-color: #020334;
+        height: 50px;
+        padding: 0 50px 0 50px;
+        &-1{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 16px;
+                font-weight: 700;
+                color: #ffffff;
+            }
+        }
+    }
+    &__body1{
+        display: flex;
+        padding: 0px 50px 0px;
+        border-bottom: 1px solid rgba(9, 21, 36, 0.078);
+        align-items: center;
+        height: 98px;
+        @include transition(.3s);
+        &:hover{
+            background-color: #f9fafb;
+        }
+        &-1{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                color: #020334; 
+            }
+        }
+        &-2{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57; 
+            }
+        }
+        &-3{
+            display: flex;
+            width: 25%;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57;
+                margin-top: 6px;
+                margin-left: 10px;
+            }
+            
+        }
+        &-4{
+            width: 25%;
+            &--tag{
+                background-color: #ffecf2;               
+                display: inline-block;
+                margin-right: 87px;
+                @media #{$xl}{
+                    margin-right: 70px;
+                 }
+                 @media #{$lg}{
+                    margin-right: 20px;
+                }
+                span{
+                    display: inline-block;
+                    padding: 0px 9px;
+                    font-family: $Manrope;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #fd4680; 
+                }
+            }
+            &--btn{
+                cursor: pointer;
+                font-family: $Manrope;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: transparent;
+                border: 2px solid rgb(234, 236, 242);
+                text-align: center;
+                padding: 10px 34px;
+                display: inline-block;
+                @include border-radius(0px);
+                @include transition(.3s);
+                a{
+                    @include transition(.1s);
+                    color: #020334; 
+                }
+                @media #{$md,$sm,$xs}{
+                    display: none;
+                }
+                &:hover{
+                    border: 2px solid #fd4680;
+                    background-color: #fd4680;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+    &__body2{
+        display: flex;
+        padding: 0px 50px 0px;
+        border-bottom: 1px solid rgba(9, 21, 36, 0.078);
+        align-items: center;
+        height: 98px;
+        @include transition(.3s);
+        &:hover{
+            background-color: #f9fafb;
+        }
+        &-1{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                color: #020334; 
+            }
+        }
+        &-2{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57; 
+            }
+        }
+        &-3{
+            display: flex;
+            width: 25%;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57;
+                margin-top: 6px;
+                margin-left: 10px;
+            }
+            
+        }
+        &-4{
+            width: 25%;
+            &--tag{
+                background-color: #e4ecfa;
+                display: inline-block;
+                margin-right: 91px;
+                @media #{$xl}{
+                    margin-right: 70px;
+                 }
+                 @media #{$lg}{
+                    margin-right: 20px;
+                }
+                span{
+                    display: inline-block;
+                    padding: 0px 9px;
+                    font-family: $Manrope;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #2a6df5; 
+                }
+            }
+            &--btn{
+                cursor: pointer;
+                font-family: $Manrope;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: transparent;
+                border: 2px solid rgb(234, 236, 242);
+                text-align: center;
+                padding: 10px 34px;
+                display: inline-block;
+                @include border-radius(0px);
+                @include transition(.3s);
+                a{
+                    @include transition(.1s);
+                    color: #020334; 
+                }
+                @media #{$md,$sm,$xs}{
+                    display: none;
+                }
+                
+                &:hover{
+                    border: 2px solid #fd4680;
+                    background-color: #fd4680;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+    &__body3{
+        display: flex;
+        padding: 0px 50px 0px;
+        border-bottom: 1px solid rgba(9, 21, 36, 0.078);
+        align-items: center;
+        height: 98px;
+        @include transition(.3s);
+        &:hover{
+            background-color: #f9fafb;
+        }
+        &-1{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                color: #020334; 
+            }
+        }
+        &-2{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57; 
+            }
+        }
+        &-3{
+            display: flex;
+            width: 25%;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57;
+                margin-top: 6px;
+                margin-left: 10px;
+            }
+            
+        }
+        &-4{
+            width: 25%;
+            &--tag{
+                background-color: #ffecf2;               
+                display: inline-block;
+                margin-right: 87px;
+                @media #{$xl}{
+                    margin-right: 70px;
+                 }
+                 @media #{$lg}{
+                    margin-right: 20px;
+                }
+                span{
+                    display: inline-block;
+                    padding: 0px 9px;
+                    font-family: $Manrope;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #fd4680; 
+                }
+            }
+            &--btn{
+                cursor: pointer;
+                font-family: $Manrope;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: transparent;
+                border: 2px solid rgb(234, 236, 242);
+                text-align: center;
+                padding: 10px 34px;
+                display: inline-block;
+                @include border-radius(0px);
+                @include transition(.3s);
+                a{
+                    @include transition(.1s);
+                    color: #020334; 
+                }
+                @media #{$md,$sm,$xs}{
+                    display: none;
+                }
+                &:hover{
+                    border: 2px solid #fd4680;
+                    background-color: #fd4680;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+    &__body4{
+        display: flex;
+        padding: 0px 50px 0px;
+        border-bottom: 1px solid rgba(9, 21, 36, 0.078);
+        align-items: center;
+        height: 98px;
+        @include transition(.3s);
+        &:hover{
+            background-color: #f9fafb;
+        }
+        &-1{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                color: #020334; 
+            }
+        }
+        &-2{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57; 
+            }
+        }
+        &-3{
+            display: flex;
+            width: 25%;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57;
+                margin-top: 6px;
+                margin-left: 10px;
+            }
+            
+        }
+        &-4{
+            width: 25%;
+            &--tag{
+                background-color: #ffecf2;               
+                display: inline-block;
+                margin-right: 87px;
+                @media #{$xl}{
+                    margin-right: 70px;
+                 }
+                 @media #{$lg}{
+                    margin-right: 20px;
+                }
+                span{
+                    display: inline-block;
+                    padding: 0px 9px;
+                    font-family: $Manrope;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #fd4680; 
+                }
+            }
+            &--btn{
+                cursor: pointer;
+                font-family: $Manrope;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: transparent;
+                border: 2px solid rgb(234, 236, 242);
+                text-align: center;
+                padding: 10px 34px;
+                display: inline-block;
+                @include border-radius(0px);
+                @include transition(.3s);
+                a{
+                    @include transition(.1s);
+                    color: #020334; 
+                }
+                @media #{$md,$sm,$xs}{
+                    display: none;
+                }
+                &:hover{
+                    border: 2px solid #fd4680;
+                    background-color: #fd4680;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        
+    }
+    &__body5{
+        display: flex;
+        padding: 0px 50px 0px;
+        border-bottom: 1px solid rgba(9, 21, 36, 0.078);
+        align-items: center;
+        height: 98px;
+        @include transition(.3s);
+        &:hover{
+            background-color: #f9fafb;
+        }
+        &-1{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                color: #020334; 
+            }
+        }
+        &-2{
+            width: 25%;
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57; 
+            }
+        }
+        &-3{
+            display: flex;
+            width: 25%;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            span{
+                font-family: $Manrope;
+                font-size: 15px;
+                font-weight: 400;
+                color: #4b4b57;
+                margin-top: 6px;
+                margin-left: 10px;
+            }
+            
+        }
+        &-4{
+            width: 25%;
+            &--tag{
+                background-color: #e4ecfa;
+                display: inline-block;
+                margin-right: 91px;
+                @media #{$xl}{
+                    margin-right: 70px;
+                }
+                @media #{$lg}{
+                    margin-right: 20px;
+                }
+                span{
+                    display: inline-block;
+                    padding: 0px 9px;
+                    font-family: $Manrope;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #2a6df5; 
+                }
+            }
+            &--btn{
+                cursor: pointer;
+                font-family: $Manrope;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: transparent;
+                border: 2px solid rgb(234, 236, 242);
+                text-align: center;
+                padding: 10px 34px;
+                display: inline-block;
+                @include border-radius(0px);
+                @include transition(.3s);
+                a{
+                    @include transition(.1s);
+                    color: #020334; 
+                }
+                @media #{$md,$sm,$xs}{
+                    display: none;
+                }
+                &:hover{
+                    border: 2px solid #fd4680;
+                    background-color: #fd4680;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+}
